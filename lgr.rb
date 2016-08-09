@@ -9,17 +9,17 @@ end
 
 
 # The path and file name of BoA's QIF file
-infilepath = 'c:\ledger\01-2010.qif' 
+infilepath = 'input.qif'
 
 # The path end file name of the file Ledger data file we are creating
-outfilepath = 'c:\ledger\01-2010.dat' 
+outfilepath = 'output.dat'
 
 
 def accountcheck(payee)
   # This function looks at the payee string and returns the transaction account based on the hash @accounts
   # defined in the accountdefs.rb
 
-  require "accountdefs.rb" # 
+  require "./accountdefs.rb"
   account = "Expenses:Misc" # Set Default Account
   
   @accounts.each {|search, acct|
